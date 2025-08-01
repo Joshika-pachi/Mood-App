@@ -1,0 +1,117 @@
+/* Sidebar container */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh; 
+    width: 150px; 
+    font-family: Archivo;
+    background-color: #fff;
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 20px 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure the sidebar stays on top */
+}
+
+/* Sidebar title */
+.sidebarTitle {
+    color: #F83D8E;
+    font-size: 28px;
+    margin-bottom: 50px;
+    font-weight: bold;
+    padding: 10px; /* Added padding for better spacing */
+    text-align: center; /* Centered title */
+}
+
+/* Navigation menu styles */
+.sidebarNav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%; /* Ensure buttons fill the width */
+}
+
+.sidebarNav li {
+    width: 100%; /* Ensure buttons fill the width */
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center; /* Center buttons within the sidebar */
+}
+
+.sidebarNav a {
+    text-decoration: none;
+    color:  #646464 ; /* Deep purple for better contrast */
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px;
+    width: 100%;
+    display: block;
+    text-align: center;
+    border-radius: 8px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.sidebarNav a:hover {
+    background-color: rgba(104, 50, 146, 0.1); /* light purple hover */
+    color: #F83D8E; /* switch to pink on hover */
+}
+
+.sidebarNav a:active {
+    background-color: rgba(104, 50, 146, 0.2); /* slightly darker active */
+    color: #F83D8E;
+}
+
+.sidebarNav a.active {
+    background-color: rgba(248, 61, 142, 0.2); /* pastel pink background for active */
+    color: #683292;
+    font-weight: bold;
+}
+
+
+/* Logout button styling */
+.logoutButton {
+    background-color: #F83D8E;
+    color: #fff;
+    font-size: 19px;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    width: 80%; /* Width of the button */
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.logoutButton:hover {
+    background-color: #3acebd; /* Lighter shade on hover */
+    transform: translateY(-3px); /* Slight lift on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logoutButton:active {
+    background-color: #00332b; /* Darker shade when pressed */
+    transform: translateY(0); /* Reset lift on press */
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 120px; /* Adjust width for smaller screens */
+        padding: 10px 0; /* Reduce padding for smaller screens */
+    }
+
+    .sidebarTitle {
+        font-size: 22px; /* Smaller title for smaller screens */
+    }
+
+    .sidebarNav a, .logoutButton {
+        font-size: 16px; /* Smaller font size */
+        padding: 10px; /* Reduce padding for smaller buttons */
+    }
+}

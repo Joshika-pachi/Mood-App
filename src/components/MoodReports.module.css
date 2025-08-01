@@ -1,0 +1,70 @@
+
+.reportsContainer {
+    display: flex;
+    height: 100vh;
+}
+
+
+.reportsContent {
+    flex: 1;
+    padding: 20px;
+    background-color: #f9f9f9;
+    overflow-y: auto; 
+    margin-left: 150px; 
+}
+
+.navigationBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.navigationBar button {
+    background-color:#F83D8E;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.navigationBar button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.navigationBar button:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+
+.histogramGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+}
+
+
+.histogramItem {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    height: 300px;
+}
+
+.histogramItem h2 {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #333;
+}
+
+
+.histogramItem canvas {
+    width: 100% !important;
+    height: 200px !important; 
+    margin-top: 10px; 
+}
